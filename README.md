@@ -12,4 +12,6 @@ minikube start
 
 kubectl run my-app --image=u1ih/hello --port=8080
 
+kubectl expose deployment my-app --type=NodePort --port=8080 --target-port=8080
+
 minikube service my-app --url
